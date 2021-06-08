@@ -1,5 +1,7 @@
 import axios from "axios";
 
+import { headersInfo } from './private.js'
+
 const URL = "https://world-population.p.rapidapi.com/population";
 
 export const fetchPopulation = async (query) => {
@@ -9,8 +11,8 @@ export const fetchPopulation = async (query) => {
         country_name: query,
       },
       headers: {
-        "x-rapidapi-key": "be76d56f08mshdaa678b2656e641p1789c4jsn6e229fa4838e",
-        "x-rapidapi-host": "world-population.p.rapidapi.com",
+        "x-rapidapi-key": headersInfo["api_key"],
+        "x-rapidapi-host": headersInfo["api_host"],
       },
     });
     return data.body;

@@ -40,6 +40,7 @@ const App = () => {
           <div className="country-pop">
             {numberWithCommas(population.population)}
           </div>
+          <h3>Ranking: {population.ranking}</h3>
         </div>
       )
     :(<br />)
